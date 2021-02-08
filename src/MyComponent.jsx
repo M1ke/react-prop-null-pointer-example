@@ -24,7 +24,7 @@ MyComponent.propTypes = {
   something: PropTypes.shape({
     value: PropTypes.string
   }),
-  requiredThing: PropTypes.bool.required,
+  requiredThing: PropTypes.bool.isRequired,
   notUsed: PropTypes.bool
 };
 
