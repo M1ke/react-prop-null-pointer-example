@@ -6,6 +6,8 @@ const format = val => {
 };
 
 const MyComponent = ({ something, requiredThing, notDeclared, notUsed }) => {
+  // The below should be flagged by eslint; if `something` isn't set (which is allowed)
+  // then this call will throw a TypeError for accessing `value` on undefined
   const output = format(something.value);
 
   console.log("Required thing prop was passed as", requiredThing);
